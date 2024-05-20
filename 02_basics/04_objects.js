@@ -18,3 +18,13 @@ console.log(obj3)
 console.log(tinderuser.hasOwnProperty("isLoggedin"))
 
 
+
+const course = {
+    coursename: "Mathematics",
+    price: "$6.9",
+    courseinstructor: "soumyadeep"
+}
+
+const {coursename} = course
+console.log(coursename)
+//console.log(oggg)
