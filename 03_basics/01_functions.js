@@ -30,7 +30,7 @@
 
 
 function calculateCartPrice(...num1){
-   return num1
+   console.log(num1)
 }
 console.log("total cart ammount:", calculateCartPrice(69, 70, 80, 90))
 
