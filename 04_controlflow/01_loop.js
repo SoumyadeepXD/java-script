@@ -25,4 +25,27 @@
 // console.log(`user power: ${power}`)
 
 // *********************SHORT HAND NOTATION***************************
+let balance = 500
+if (balance ==500) console.log("test");
+if (balance ==500) console.log("test"),console.log("test2"); // this is a bad appoach 
+
+// i know about if else statement
+//{I will write the code later}
+
+// and or statement
+
+const userLoggedIn = true
+const debitCard = true
+if(userLoggedIn && debitCard==true){
+    console.log("allow to buy courses")
+}
+
+const loginViaGmail = true
+const LoginVisEmail = true
+if(LoginVisEmail||loginViaGmail){
+    console.log(`user is logged in`)
+}
+
+
+
 
