@@ -19,4 +19,4 @@ let j = 0
 do {
     console.log(`i am noob`)
     j++
-} while (j<=5);
+} while (j<=5); 
