@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM with Soumyadeep</title>
+</head>
+<body style="background-color: #212121;color: antiquewhite;">
+
+    <div class="parent">
+        <!-- sgwsrsvdfghwefwsgsg -->
+        <div class="day">Sunday</div>
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+    </div>
+</body>
+<script>
+    const prt = document.querySelector('.parent')
+    console.log(prt);
+    console.log(prt.children)
+    for (let i = 0; i < prt.children.length; i++) {
+        console.log(prt.children[i].innerHTML)
+        
+    }
+
+    console.log(prt.childNodes)
+
+</script>
+</html>
