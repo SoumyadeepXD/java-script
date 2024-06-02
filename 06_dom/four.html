@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;color: antiquewhite;">
+    <ul class="language">
+        <li>PYTHON</li>
+    </ul>
+</body>
+<script>
+    function addlang(addlang) {
+        const li=document.createElement('li');
+        li.innerHTML=`${addlang}`
+        document.querySelector('.language').appendChild(li)
+    }
+    //edit
+    addlang("javascript")
+    addlang("C++")
+    function optlanguage(addlang) {
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(addlang))
+        document.querySelector('.language').appendChild(li)
+    }
+
+    //edit
+    optlanguage("golang")
+    const scndLanguage = document.querySelector("li:nth-child(3)")
+    const newli= document.createElement('li')
+    newli.innerText= "mongodb"
+    scndLanguage.replaceWith(newli)
+    //edit
+    const frst=document.querySelector("li:first-child")
+    frst.outerHTML="<li>SQL</li>"
+
+    //remove
+    const last= document.querySelector("li:nth-child(3)")
+    last.remove()
+</script>
+</html>
