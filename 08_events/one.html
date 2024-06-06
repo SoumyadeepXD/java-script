@@ -23,12 +23,11 @@
 //    japan.addEventListener('click',function(e) {
 //         alert("japannnnnn")       
 //    })
-   document.querySelector('#images').addEventListener('click',function(e){
-    console.log(e.target.tagName);
-   if (e.target.tagName === 'IMG') {
-    let removef = e.target.parentNode
-    removef.remove()
-   }   
-})
+    document.querySelector('#images').addEventListener('click',function(e){
+        if (e.target.tagName==='IMG') {
+        let removeit= e.target.parentNode;
+        removeit.remove()          
+        }
+    })
     </script>
 </html>
