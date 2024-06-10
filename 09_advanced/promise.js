@@ -4,9 +4,46 @@ const promiseOne = new Promise(function(resolve, reject){
     setTimeout(function(){
         console.log('Async task is compelete');
         resolve()
-    }, 1000)
+    }, 100)
 })
 
 promiseOne.then(function(){
     console.log("Promise consumed");
+})
+
+new Promise(function(resolve,reject){
+    setTimeout(function(){
+        console.log("wrok 2")
+        resolve()
+    },100)
+}).then(function(){
+    console.log("Async 2 resolved");
+})
+
+const promise3 = new Promise(function(resolve,reject){
+    setTimeout(function(){
+        resolve({username: "soumyadeep", mail:"sd@sd.com"});
+    },100)
+})
+promise3.then(function(user){
+    console.log(user);
+})
+const promise4=new Promise(function(resolve,reject){
+    setTimeout(() => {
+        let error=false;
+        if(!error){
+            resolve({username:"soumyadeep", pass: "ami janina"})
+        }else{
+            reject("Something went wrong")
+        }
+    }, 100);
+})
+
+promise4.then((user)=>{
+    console.log(user);
+    return user.username
+}).then((username)=>{
+    console.log(username)
+}).catch(function(error){
+    console.log(error)
 })
