@@ -46,4 +46,47 @@ promise4.then((user)=>{
     console.log(username)
 }).catch(function(error){
     console.log(error)
+}).finally(()=>{
+    console.log("finally ")
 })
+
+
+
+const promise5=new Promise(function(resolve,reject){
+    setTimeout(() => {
+        let error=false;
+        if(!error){
+            resolve({username:"soumyadeep", pass: "amisottijanina"})
+        }else{
+            reject("Something went wrong")
+        }
+    }, 100)
+})
+
+async function consumed(){
+    try {
+        const responce = await promise5;
+    console.log(responce);
+    } catch (error) {
+     console.log(error);   
+    }
+}
+consumed()
+
+// async function alluser(){
+//     const responce = await fetch('https://jsonplaceholder.typicode.com/users');
+//     const data = responce.json()
+//     console.log(data)
+// } 
+
+// alluser()
+
+
+fetch('https://jsonplaceholder.typicode.com/users')
+.then((Response)=>{
+    return Response.json()
+}).then(
+    (data)=>{
+        console.log(data)
+    }
+)
