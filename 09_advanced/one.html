@@ -6,15 +6,14 @@
     <title>Document</title>
 </head>
 <body style="background-color: #212121;">
-    0	UNSENT	Client has been created. open() not called yet.
-1	OPENED	open() has been called.
-2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
-3	LOADING	Downloading; responseText holds partial data.
-4	DONE	The operation is complete.
+    <div id="image"></div>
+    <h1></h1>
 </body>
 <script>
-    const requestUrl = 'https://api.github.com/users/SoumyadeepXD'
+    const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
     const xhr = new XMLHttpRequest();
+    let followers= 0;
+    let image=0;
     xhr.open('GET', requestUrl)
     xhr.onreadystatechange = function(){
         console.log(xhr.readyState);
@@ -23,8 +22,20 @@
             const data = JSON.parse(this.responseText)
             console.log(typeof data);
             console.log(data.followers);
+            console.log(data.avatar_url);
+            let followers = data.followers;
+            let image = data.avatar_url;
+            document.getElementById('image').innerHTML=`<img src=
+"${image}"
+            alt="photo" class="fixed-size-image" />`
+            document.querySelector('h1').innerHTML=`followers: ${followers}`
         }
+        
+        
+        
+
     }
     xhr.send();
+    document.querySelector('h1').innerHTML=`followers: ${followers}`
 </script>
 </html>
